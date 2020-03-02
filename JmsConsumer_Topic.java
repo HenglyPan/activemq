@@ -20,7 +20,7 @@ public class JmsConsumer_Topic {
 
         //创建消息的消费者
         MessageConsumer consumer = session.createConsumer(topic);
-        //指定消费哪一个队列里的消息
+        //指定消费哪一个队列里的消息 使用拉曼达表达式
         consumer.setMessageListener(message -> {
             if (message instanceof TextMessage){
                 try {
