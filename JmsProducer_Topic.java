@@ -4,6 +4,7 @@ import javax.jms.*;
 
 public class JmsProducer_Topic {
     private static final String ACTIVEMQ_URL = "tcp://192.168.0.128:61616";
+    //主题的名字
     public static final String TOPIC_NAME = "topic01";
     public static void main(String[] args) throws JMSException {
         //创建connection工厂
