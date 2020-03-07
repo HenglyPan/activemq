@@ -17,7 +17,6 @@ public class JmsConsumer_Topic {
 
         //创建目的地 topic 或queue
         Topic topic = session.createTopic(TOPIC_NAME);
-
         //创建消息的消费者
         MessageConsumer consumer = session.createConsumer(topic);
         //指定消费哪一个队列里的消息 使用拉曼达表达式

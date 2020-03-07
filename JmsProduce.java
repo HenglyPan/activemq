@@ -18,6 +18,9 @@ public class JmsProduce {
 
         //5.创建消息的生产者
         MessageProducer messageProducer = session.createProducer(queue);
+        //6.设置消息生产者的持久模式
+     //   messageProducer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+        messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
         //6.创建消息
         for (int i = 0; i <4 ; i++) {
             TextMessage textMessage = session.createTextMessage("I love active" + i);
